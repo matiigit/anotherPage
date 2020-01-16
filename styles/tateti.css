@@ -1,0 +1,90 @@
+/* 
+    SET STRUCTURE 
+*/
+body {
+    display: grid;
+    grid-template-areas: "head"
+                        "game"
+                        "controls"
+                        "footer";
+    background: black;
+    grid-row-gap: 15px;
+}
+
+/* 
+    SET MY TATETI 
+*/
+.tateti {
+    grid-area: game;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-template-rows: repeat(3, 8em);
+    grid-template-columns: repeat(3, 8em);
+}
+
+.tateti > .topbor {
+    border-top: none;
+}
+
+.tateti > .botbor {
+    border-bottom: none;
+}
+
+.tateti > .rightbor {
+    border-right: none;
+}
+
+.tateti > .leftbor {
+    border-left: none;
+}
+
+.tateti > button {
+    background-color: transparent;
+    border: 3px solid rgb(5, 140, 202);
+    font-size: 5em;
+}
+
+/* 
+    SET MY CONTROLS 
+*/
+.controls {
+    grid-area: controls;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    font-family: monospace;
+    height: 3em;
+}
+
+/* 
+    SET MY SCORE PANEL 
+*/ 
+.score {
+    grid-area: head;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-auto-flow: column;
+    color: white;
+
+    font-family: monospace;
+    font-size: 2em;
+}
+
+/* 
+    SET BACK 
+*/
+a {
+    grid-area: footer;
+    justify-self: center;
+    align-self: center;
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: red;
+}

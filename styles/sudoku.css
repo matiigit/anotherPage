@@ -1,0 +1,76 @@
+body {
+    display: grid;
+    grid-template-areas:"game"
+                        "controls"
+                        "footer";
+    grid-row-gap: 15px;
+}
+
+/* SET TABLE */
+#tablero {
+    grid-area: game;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: row;
+    align-self: center;
+    justify-self: center;
+}
+
+#tablero > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+} 
+
+#tablero > div * {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    font-size: 2em;
+    border: 1px solid gray;
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bolder;
+    color: red;
+}
+
+/* COLOR TABLE */ 
+#tablero > div {
+    border: 2px solid black;
+}
+
+.square1 *, .square3 *, .square5 *, .square7 * {
+    background: rgba(198, 213, 218, 0.76);
+}
+
+/* CONTROLS */
+#controls {
+    align-self: center;
+    justify-self: center;
+}
+
+#controls * {
+    grid-area: conrols;
+    width: 8.5em;
+    height: 3em;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: chocolate;
+}
+
+/* SET FOOTER */
+a {
+    grid-area: footer;
+    text-align: center;
+}
+
+/* REMOVE BUTTON INPUT NUMBER */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}

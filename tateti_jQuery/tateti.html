@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TA-TE-TI</title>
+
+        <link rel="stylesheet" href="../styles/tateti.css">
+    </head>
+
+    <body>
+        <div class="score">
+            <P>PLAYER X</P>
+            <p id="scoreX">0</p>
+            <p>EMPATE</p>
+            <p id="scoreDraw">0</p>
+            <p>PLAYER O</p>
+            <p id="scoreY">0</p>
+        </div>
+        
+        <div class="tateti">
+            <button id="block0" type="button" class="topbor leftbor"></button>
+            <button id="block1" type="button" class="topbor"></button>
+            <button id="block2" type="button" class="topbor rightbor"></button>
+            <button id="block3" type="button" class="leftbor"></button>
+            <button id="block4" type="button"></button>
+            <button id="block5" type="button" class="rightbor"></button>
+            <button id="block6" type="button" class="leftbor botbor"></button>
+            <button id="block7" type="button" class="botbor"></button>
+            <button id="block8" type="button" class="botbor rightbor"></button>
+        </div>
+
+        <div class="controls">
+            <button id="newGame">NEW GAME</button>
+            <button id="reset">RESET TABLE</button>
+        </div>
+
+        <a href="../index.html"><p><strong>BACK TO HOME</strong></p></a>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="tateti.js"></script>
+</html>
